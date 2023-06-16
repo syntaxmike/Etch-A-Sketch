@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+const btnSubmit = document.querySelector('button');
 
 function createGrid(gridNum = 16) {
     for(let rows = 0; rows < gridNum; rows++) {
@@ -12,23 +13,32 @@ function createGrid(gridNum = 16) {
     }
 }
 
+function changeColor(e) {
+    let targetCell = e.target;
+    if(targetCell.className === 'grid') {
+        targetCell.style.backgroundColor =`#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    }
+
+}
+
 function removeCurrentGrid() {
     while(container.firstChild) {
         container.removeChild(container.firstChild);
     }
 }
 
-const btnSubmit = document.querySelector('button');
-
-btnSubmit.addEventListener('click', function(e) {
+function getUserInput() {
     const userInput = +document.getElementById('gridNum').value;
 
-    if(isNaN(userInput) || userInput > 100 || userInput < 0) {
+    if(isNaN(userInput) || userInput > 101 || userInput < 1) {
         alert(`Please enter a number between 1 - 100`)
     } else {
         removeCurrentGrid();
         createGrid(userInput);
     }
-})
+}
 
+
+btnSubmit.addEventListener('click', getUserInput);
+window.addEventListener('mouseover', changeColor);
 createGrid();
