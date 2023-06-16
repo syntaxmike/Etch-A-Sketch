@@ -15,6 +15,15 @@ p {
     width: 720px;
 }
 
+.colorChange {
+    display: flex;
+    gap: 10px;
+    justify-content:center;
+    padding: 10px 0;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
 .grid-form {
     display: flex;
     justify-content: center;
@@ -24,7 +33,6 @@ p {
 .grid {
     border: none;
     display: inline-block;
-    gap: 0;
     margin: 0;
     outline: 1px solid black;
     padding: 0;
@@ -32,4 +40,20 @@ p {
 
 .change {
     background-color: black;
+}
+
+
+@media (max-width: 850px) {
+    .container {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  
+
+@media (max-width: 650px) {
+    .container {
+        height: 300px;
+        width: 300px;
+    }
 }

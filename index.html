@@ -8,12 +8,19 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
-    <h2>Etch-A-Sketch Grid</h2>
-    <p>Default setting is 16x16</p>
+    <main>
+        <h2>Etch-A-Sketch Grid</h2>
+        <p>Default setting is 16x16</p>
+    </main>
     <form class="grid-form" onsubmit="return false">
         <input id="gridNum"/>
-        <button type="submit">Submit</button>
+        <button id="submit" type="submit">Submit</button>
     </form>
+    <div class="colorChange">
+        <button id="black" type="button">B/W</button>
+        <button id="rainbow" type="button">Rainbow</button>
+        <button id="shader" type="button">Random Shader</button>
+    </div>
     <div class="container">
 
     </div>
