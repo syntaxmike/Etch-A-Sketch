@@ -24,6 +24,23 @@ p {
     margin: 0 auto;
 }
 
+.colorChange > button {
+    white-space: nowrap;
+    border-radius: 4px;
+    color: white  ;
+}
+
+.colorChange > #black {
+    background-image: linear-gradient(to top, white, black 50%);
+}
+
+.colorChange > #rainbow {
+    background-image: linear-gradient(to top, red, orange, yellow 20%, green 20%, blue, indigo, violet);
+}
+.colorChange > #shader {
+    background-image: linear-gradient(to top, black, grey, saddlebrown 20%, maroon 20%);
+}
+
 .grid-form {
     display: flex;
     justify-content: center;
