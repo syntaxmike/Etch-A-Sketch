@@ -41,4 +41,7 @@ function getUserInput() {
 
 btnSubmit.addEventListener('click', getUserInput);
 window.addEventListener('mouseover', changeColor);
-createGrid();
+
+window.onload = () => {
+    createGrid();
+}
